@@ -157,6 +157,113 @@ new_movie_3 ["rated"] = "PG-13"
 new_movie_3 ["studio.id"] = wb ["id"]
 new_movie_3.save
 
+#Insert data for roles table
+bb = Movie.find_by({"title" => "Batman Begins"})
+tdk = Movie.find_by ({"title" => "The Dark Knight"})
+tdkr = Movie.find_by ({"title" => "The Dark Knight Rises"})
+
+cb = Actor.find_by ({"name" => "Christian Bale"})
+mc = Actor.find_by ({"name" => "Michael Caine"})
+ln = Actor.find_by ({"name" => "Liam Neeson"})
+kh = Actor.find_by ({"name" => "Katie Holmes"})
+go = Actor.find_by ({"name" => "Gary Oldman"})
+hl = Actor.find_by ({"name" => "Heath Ledger"})
+ae = Actor.find_by ({"name" => "Aaron Eckhart"})
+mg = Actor.find_by ({"name" => "Maggie Gyllenhaal"})
+th = Actor.find_by ({"name" => "Tom Hardy"})
+jg = Actor.find_by ({"name" => "Joseph Gordon-Levitt"})
+ah = Actor.find_by ({"name" => "Anne Hathaway"})
+
+new_role = Role.new
+new_role ["movie_id"] = bb ["id"]
+new_role ["actor_id"] = cb ["id"]
+new_role ["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = bb ["id"]
+new_role ["actor_id"] = mc ["id"]
+new_role ["character_name"] = "Alfred"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = bb ["id"]
+new_role ["actor_id"] = ln ["id"]
+new_role ["character_name"] = "Ra's Al Ghul"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = bb ["id"]
+new_role ["actor_id"] = kh ["id"]
+new_role ["character_name"] = "Rachel Dawes"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = bb ["id"]
+new_role ["actor_id"] = go ["id"]
+new_role ["character_name"] = "Commissioner Gordon"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = tdk ["id"]
+new_role ["actor_id"] = cb ["id"]
+new_role ["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = tdk ["id"]
+new_role ["actor_id"] = hl ["id"]
+new_role ["character_name"] = "Joker"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = tdk ["id"]
+new_role ["actor_id"] = ae ["id"]
+new_role ["character_name"] = "Harvey Dent"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = tdk ["id"]
+new_role ["actor_id"] = mc ["id"]
+new_role ["character_name"] = "Alfred"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = tdk ["id"]
+new_role ["actor_id"] = mg ["id"]
+new_role ["character_name"] = "Rachel Dawes"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = tdkr ["id"]
+new_role ["actor_id"] = cb ["id"]
+new_role ["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = tdkr ["id"]
+new_role ["actor_id"] = go ["id"]
+new_role ["character_name"] = "Comissioner Gordon"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = tdkr ["id"]
+new_role ["actor_id"] = th ["id"]
+new_role ["character_name"] = "Bane"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = tdkr ["id"]
+new_role ["actor_id"] = jg ["id"]
+new_role ["character_name"] = "John Blake"
+new_role.save
+
+new_role = Role.new
+new_role ["movie_id"] = tdkr ["id"]
+new_role ["actor_id"] = ah ["id"]
+new_role ["character_name"] = "Selina Kyle"
+new_role.save
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
