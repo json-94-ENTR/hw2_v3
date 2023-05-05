@@ -275,8 +275,16 @@ wb = Studio.find_by({"name" => "Warner Bros."})
 wb_films = Movie.where({"studio_id" => wb ["id"]})
 
 #Testing associations via the following (commented) puts statements
-puts wb_films.inspect
-puts "#{} has released #{wb_films.count} Batman films by Christopher Nolan"
+# puts wb_films.inspect
+# puts "WB has released #{wb_films.count} Batman films by Christopher Nolan"
+
+for films in wb_films
+    title = wb_films["title"]
+    year = wb_films["year_released"]
+    rating = wb_films["rated"]
+    studio = wb_films["studio_id"]
+    puts "#{title} #{year} #{rating} #{studio}"
+end
 
 # Prints a header for the cast output
 puts ""
@@ -286,3 +294,5 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+
