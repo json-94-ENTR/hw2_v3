@@ -278,13 +278,13 @@ wb_films = Movie.where({"studio_id" => wb ["id"]})
 # puts wb_films.inspect
 # puts "WB has released #{wb_films.count} Batman films by Christopher Nolan"
 
-for films in wb_films
-    title = wb_films["title"]
-    year = wb_films["year_released"]
-    rating = wb_films["rated"]
-    studio = wb_films["studio_id"]
-    puts "#{title} #{year} #{rating} #{studio}"
-end
+# for films in wb_films
+#     title = wb_films["title"]
+#     year = wb_films["year_released"]
+#     rating = wb_films["rated"]
+#     studio = wb_films["studio_id"]
+#     puts "#{title} #{year} #{rating} #{studio}"
+# end
 
 # Prints a header for the cast output
 puts ""
@@ -294,5 +294,15 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+roles=Role.all
+for role in role
+    movie = Movie.find_by({"id" =>role["movie_id"]})
+    movie_name = movie["title"]
+    actor = Actor.find_by({"id" => role["actor_id"]})
+    actor_name = actor["name"]
+    character = role["character_name"]
+    puts "#{movie_name} #{actor_name} #{character}"
+end
 
 
