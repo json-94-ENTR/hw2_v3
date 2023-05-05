@@ -271,6 +271,15 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+wb = Studio.find_by({"name" => "Warner Bros."})
+wb_films = Movie.where({"studio_id" => wb ["id"]})
+#Testing associations via the following (commented) puts statements
+# puts wb_films.inspect
+# puts "WB has released #{wb_films.count} Batman films by Christopher Nolan"
+
+for films in wb_films
+    
+
 
 # Prints a header for the cast output
 puts ""
